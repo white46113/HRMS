@@ -1,0 +1,41 @@
+#image: alpine:latest
+#deploy_single_file:
+#  stage: deploy
+  
+#  only:
+#    - main
+    
+#  before_script:
+#   - apk --no-cache add openssh rsync bash
+#    - mkdir -p $HOME/.ssh
+#    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > $HOME/.ssh/git-godaddy_rsa
+#    - chmod 600 $HOME/.ssh/git-godaddy_rsa
+#    - ssh-keyscan -H $SFTP_HOST >> $HOME/.ssh/known_hosts
+#  script:
+#    - echo "Deploying single file using rsync..."
+#    - rsync -avz --progress -e "ssh -i $HOME/.ssh/git-godaddy_rsa -o StrictHostKeyChecking=yes" index.php $SFTP_USERNAME@$SFTP_HOST:$SFTP_REMOTE_DIR/index.php
+
+deploy_zip:
+  stage: deploy
+  image: ubuntu:latest
+
+  before_script:
+    - apt-get update && apt-get install -y zip rsync openssh-client git
+    # Setup SSH agent
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p $HOME/.ssh
+    #- echo "$SSH_PRIVATE_KEY" | tr -d '\r' > $HOME/.ssh/git-godaddy_rsa
+    - chmod 700 $HOME/.ssh
+    - ssh-keyscan -H $SFTP_HOST >> $HOME/.ssh/known_hosts
+
+  script:
+    # 1. Generate zip using git to exclude .gitignored files and others
+    - git archive --format zip --output php-project.zip HEAD
+    - zip -d php-project.zip .gitlab-ci.yml
+
+    # 2. Transfer the zip to the remote server
+    - rsync -avz -e "ssh -o StrictHostKeyChecking=yes" php-project.zip $SFTP_USERNAME@$SFTP_HOST:$SFTP_REMOTE_DIR/
+
+    # 3. SSH into the remote server and unzip
+    - ssh $SFTP_USERNAME@$SFTP_HOST "cd $SFTP_REMOTE_DIR && unzip -o php-project.zip && rm php-project.zip"

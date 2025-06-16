@@ -1,0 +1,38 @@
+.timesheet-container {
+    padding: 0 20px;
+    padding-bottom: 25px !important;
+}
+.setting-block{
+	background: #ffffff;
+	    width: 80%;
+    margin: auto;
+        padding: 13px;
+    border-radius: 11px;
+    box-shadow: rgba(50, 50, 78, 0.25) 0px 21px 36px -20px, rgba(0, 0, 0, 0.3) 0px 30px 51px -30px, rgba(10, 37, 50, 0.35) 0px -2px 6px 0px inset !important;
+}
+.config-box .title-box label{
+	font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    color: #6e6c6c;
+}
+.config-box .title-box span{
+    font-size: 17px;
+    margin-top: 6px;
+    color: #aa6eaa;
+    letter-spacing: 0.35px;
+}
+
+.form-switch .form-check-input{
+	cursor: pointer;
+	    width: 4em !important;
+	        height: 2em !important;
+}
+.value-box input{
+	width: 30% !important;
+    margin: auto !important;
+}
+
+{
+	font-size: 20px;
+}

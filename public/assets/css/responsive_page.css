@@ -1,0 +1,202 @@
+/* datatable paggination responsive */
+.holiday-list-body table tr table td { 
+	 padding: 12px !important;
+}
+@media screen and (max-width: 640px) {
+    .dataTables_paginate .paginate_button {
+        height: 1.9rem !important;
+        font-size: 12px !important;
+        min-width: auto !important;
+        margin: 4px !important; 
+    }
+    .dataTables_length select{
+        padding: 0.3rem !important;
+        font-size: 14px !important;
+        height: 2.1rem !important;
+    	margin-top: 12px !important;
+
+    }
+    .dataTables_length {
+	    float: unset !important;
+	}
+
+    .main-middle-container .sub-header {
+    	display: block !important;
+    }
+    .sub-header .top-btn-row{
+    	font-size: 20px !important;
+    	padding: 0px 9px 0px 6px !important;
+    }
+    .sub-header .add-action {
+    	font-size: 13px !important;
+    	padding: 6px;
+    }
+    .sub-header .add-action i {
+    	font-size: 14px !important;
+	}
+	.sub-header .timesheet-summary.icon-box {
+		grid-gap: 0 2px !important;
+	}
+	.sub-header .sub-header-right {
+		float: right !important;
+		margin: 20px 0px 11px 0px;
+	}
+	.dataTables_scrollBody{
+		    max-height: calc(100vh - 400px) !important;
+	}
+	.timesheet-summary .year-drop-down {
+		height: 33px !important;
+        margin: 5px;
+
+	}
+	.timesheet-summary .year-drop-down .select2-container--default{
+		width: 80px !important;
+	}
+	.timesheet-summary .year-drop-down .select2-container--default .select2-selection--single .select2-selection__rendered{
+		    padding-left: 10px !important;
+	}
+	.timesheet-summary .icon-box-responsive .dropdown-menu {
+		--bs-dropdown-min-width: 4rem !important;
+		 transform: translate3d(-40px, 37px, 0px) !important;
+	}
+	
+	.timesheet-summary .icon-box-responsive {
+		display: block !important;
+		    margin: 0px 0px 0px 0px;
+	}
+	.timesheet-summary .icon-box-responsive ul.dropdown-menu a,.timesheet-summary .icon-box-responsive a.view-btn{
+		font-size: 23px !important;
+	}
+	.other-actions-list-btn .dropdown-toggle {
+	    font-size: 20px !important;
+	}
+	.icon-box-responsive .view-btn{
+		padding: 2px 16px 0px 8px  !important;
+		min-width: auto !important;
+		border: 1px solid #e3dbdb !important;
+		height: 37px !important;
+	}
+	.icon-box-responsive .dropdown{
+		height: 37px;
+	}
+	.icon-box-responsive .dropdown,.icon-box-responsive ul.dropdown-menu{
+		border: 1px solid #e3dbdb !important;
+	}
+	.timesheet-summary {
+	    display: flex;
+	    grid-gap: 0 10px !important;
+	}
+
+	/* company-settings page */
+	.setting-block {
+		width: 100% !important;
+	}
+	.setting-block .config-box .row {
+	    padding: 5px 0px 7px 0px !important;
+	    margin: 0px !important;
+	}
+	.setting-block .config-box .title-box span {
+    	font-size: 9px;
+    }
+    .setting-block .config-box .title-box label {
+    	    font-size: 13px;
+    }
+    .setting-block .config-box .value-box input[type="text"] {
+	    width: 100% !important;
+	}
+
+	/* holiday list page*/
+	.holiday-list-body table tr table td div {
+		font-size: 11px !important;
+	}
+	.holiday-list-body table tr table td{
+		padding: 6px 0px 0px 6px  !important;
+	}
+	.holiday-list-body .holiday-month-row{
+		    width: 35%;
+	}
+	.holiday-list-body .holiday-month-row table tbody tr td{
+		border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+    	border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    	padding-right: 7px !important;
+	}
+
+	/* for all icon in table */
+	.dataTable tbody tr td i{
+		font-size: 20px !important;
+	}
+
+}
+
+.dataTables_scrollBody {
+	    max-height: calc(100vh - 301px);
+}
+.timesheet-summary .icon-box-responsive {
+	display: block;
+	padding: 5px;
+}
+
+@media screen and (min-width: 641px) {
+	.icon-box-responsive .dropdown {
+		border: unset !important;
+		    border-radius: 0 6px 6px 0 !important;
+		        background: unset !important;
+		        left:0px !important;
+	}
+	.icon-box-responsive .dropdown-toggle{
+		display: none !important;
+	}
+	.icon-box-responsive .dropdown .dropdown-menu{
+		display: block;
+		margin-left: 10px;
+	}
+	.icon-box-responsive .dropdown .dropdown-menu .dropdown-item{
+		    /*padding: 0 20px !important;*/
+		    line-height: 37px;
+	}
+	.icon-box-responsive .dropdown-menu li{
+		    padding-left: 0px !important;
+	}
+	.icon-box-responsive ul.dropdown-menu {
+		padding: 0px !important;
+		border: none !important;
+		position: unset;
+		    transform: unset !important;
+		        margin-top: 0rem !important;
+	}
+	.icon-box-responsive ul.dropdown-menu li{
+		    width: unset !important;
+		        display: block !important;
+	    float: right;
+	}
+	.icon-box-responsive .view-btn,.icon-box-responsive .dropdown-menu .dropdown-item{
+		background: #ffffff !important;
+	    font-size: 26px;
+	    /* padding: 0px 9px 0px 9px; */
+	    line-height: 43px !important;
+	    padding: 0 12px !important;
+	    min-width: auto !important;
+	    height:auto !important;
+	    font-size: 26px !important;
+	    border: 1px solid #e3dbdb !important;
+	    border-radius: 5px !important;
+	    float: right !important;
+
+
+	}
+	.icon-box-responsive .view-btn i,.icon-box-responsive .dropdown-menu .dropdown-item i{
+		color: #555555 !important;
+	}
+	.icon-m-10{
+		margin: 0px 10px 0px 0px !important;
+	}
+	.icon-box-responsive .view-btn:hover,.icon-box-responsive .dropdown-menu .dropdown-item:hover {
+	    background-color: #dde2e2 !important;
+	    cursor: pointer;
+	}
+	.icon-box-responsive .view-btn:hover i,.icon-box-responsive .dropdown-menu .dropdown-item:hover i {
+	    color: #007bff !important;
+	}
+
+
+}

@@ -1,0 +1,384 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.custom_btn{
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-radius: 20px !important;
+  background-color: #007bc7 !important;
+}
+.login-container {
+  border-bottom: 10px solid rgba(0, 123, 199, 0.3);
+  max-width: 75%;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+  margin-top: 10px;
+}
+label {
+  margin-bottom: 0 !important;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.error{
+  color: red !important;
+}
+#logo{
+  width: 20%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header-logo {
+  max-width: 88%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: rgba(0, 123, 199, 0.3);
+}
+.password-icon {
+  /*position: relative;
+  float: right;
+  top: -28px;
+  right: 5px;*/
+}
+.password-login-icon{
+  position: relative;
+  float: right;
+  top: -30px;
+  right: 5px;
+}
+.form-control{
+  border-radius: 5px !important;
+}
+.star_required{
+  color: red !important;
+}
+.input-group-text{
+  border-radius: 5px 0px 0px 5px !important;
+}
+.no_radius{
+  border-radius: 0 0 0 0 !important;
+}
+#country_id{
+  max-width: 110px !important;
+  padding-left: 5px;
+  padding-right: 0px;
+}
+#country_id option{
+  font-size: 12px;
+}
+.text-bold{
+  font-weight: bold;
+}
+.toast-error{
+  background-color: red !important;
+}
+.toast-success{
+  background-color: green !important;
+}
+
+label {
+  margin-bottom: 0.5rem !important;
+    font-weight: 700;
+}
+.iti--allow-dropdown {
+  width: 100%;
+}
+label.error{
+  margin-top: 0.5rem!important;
+}
+
+.form-control.error{
+  color: #212529 !important;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.input-group .input-group-text{
+    background: rgba(0, 0, 0, 0.05) ;
+    border: var(--bs-border-width) solid #DFE5EF ;
+        border-radius: 0px 5px 5px 0px ;
+}
+.input-group .input-group-text i{
+      font-size: 19px;
+}
+
+/*select2 css*/
+
+.select2-container--default .select2-selection--single{
+  border-radius: 5px !important;
+    height: 48px !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #5897fb;
+  color: white;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+      font-size: 16px !important;
+      padding-left: 19px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 44px !important;
+}
+span.select2-selection.select2-selection--multiple {
+    border-radius: 5px !important;
+    height: 48px !important;
+    
+    width: 100% !important;
+    border: solid #DFE5EF 1px;
+}
+span.select2-selection.select2-selection--multiple input.select2-search__field{
+    padding-left: 19px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #5A6A85 !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    list-style: none;
+    height: 35px;
+        vertical-align: middle;
+    padding: 6px !important;
+
+}
+
+
+.col .select2-container{
+  width: 100% !important
+}
+.input-group .input-group-text.date-picker-addon i, .input-group .input-group-text.time-picker-addon i {
+      line-height: 40px;
+}
+
+
+.ui-widget-shadow {
+  -webkit-box-shadow: 0px 0px 5px #666666;
+  box-shadow: 0px 0px 5px #666666;
+}
+.week-off-box .select2-selection{
+  padding-left: 6px;
+}
+.form-contain {
+     margin: 16px;
+    
+}
+
+.title-block {
+  border-bottom: 1px solid gray;
+    padding-bottom: 9px;
+    font-size: 16px !important;
+    color: #000000 !important;
+    font-family: "gilroysemibold" !important;
+    text-transform: inherit;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 5px;
+    margin: 11px 0 0 0;
+}
+#employee_registration .row .col label.form-label,#employee_registration .row .col-6 label.form-label{
+      width: 100%;
+    color: #555555;
+    font-size: 15px !important;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+#employee_registration .row .col input.form-control,#employee_registration  .row .col-6 input.form-control{
+    border-radius: 5px;
+    height: 48px ;
+    padding: 0px 11px;
+    width: 100% ;
+        font-size: 16px !important;
+}
+#employee_registration .row .col input.form-check-input {
+    width: 1.588em;
+    height: 1.588em;
+}
+#employee_registration .row .col .form-check-label {
+     padding: 4px 0px 2px 2px;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 2px;
+}
+
+#employee_registration .update-file-block input{
+  width: 85% !important;
+}
+
+#employee_registration #profile_image{
+      padding: 8px 16px !important;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 2.1;
+}
+
+
+.title-block label{
+  width: 88%;
+    float: left;
+        font-size: 19px !important;
+    padding-left: 0px;
+}
+.next,.previous,.discard{
+      width: 10%;
+}
+
+.title-block button{
+  font-size: 19px;
+    background: #206DFF !important;
+     width: 12%;
+}
+.add-action i {
+    font-size: 18px;
+    background: white;
+    color: #206DFF !important;
+    margin-right: 6px;
+    border-radius: 4px;
+}
+
+.add-action span {
+    position: relative;
+    top: -2px;
+}
+
+.action-box i{
+  color: red;
+      margin-top: 2px;
+}
+
+.float-right{
+  float: right;
+}
+
+.form-check-input {
+    --bs-form-check-bg: transparent;
+    width: 1.388em;
+    height: 1.388em;
+
+}
+.cursor{
+  cursor: pointer;
+}
+.form-check-input[type=radio] {
+    border-radius: 50% !important;
+    padding: 0px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+      color: #999;
+          font-weight: bold;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 1px !important;
+}
+.select2-selection.select2-selection--single .select2-selection__rendered {
+    padding-top: 1px !important;
+}
+.select2-container--default .select2-selection--single,.select2-container--default .select2-selection--multiple {
+      border: var(--bs-border-width) solid #DFE5EF;
+}
+.sub-header.att-sub-header{
+    box-shadow: none;
+    background: var(--body-bg);
+    height: 70px !important;
+    display: flex;
+    align-items: center;
+    /*border-bottom: 1px solid #DBDADB;*/
+    padding: 0px 5px 0px 3px !important;
+    margin: 0 20px !important;
+    width: calc(100% - 40px);
+}
+.sub-header .sub-header-left h3 {
+    color: black;
+    margin-bottom: 0px !important;
+    font-size: 21px !important;
+}
+
+.update-file-block span{
+  /*width: 1  4% !important;*/
+  border-radius: 5px 0px 0px 5px !important;
+  /*background: #f3eaf5 !important;*/
+}
+
+.update-file-block input{
+  border-radius: 0px 5px 5px 0px !important;
+   pointer-events: none;
+}
+.cursor {
+  cursor: pointer;
+}
+.update-imeg-file img{
+    
+        /*width: 50%;*/
+    /*height: 79px;*/
+}
+
+.banck-details .title-block label{
+      padding-top: 20px;
+          margin-bottom: 0px !important;
+
+}
+
+.image_input {
+  width: 0.1px;
+    height: 0.1px !important;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.image-upload-block-box,.image-upload-block-box:hover {
+  text-align: center;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #555;
+    padding: 0;
+        line-height: 43px;
+    width: 300px;
+    /* margin: auto; */
+    width: 100%;
+    display: block;
+    border: 2px dashed #5D87FF;
+}
+.image-upload-block-box span{
+      font-size: 18px;
+}
+.image-upload-block-box i{
+      font-size: 18px;
+    margin-right: 8px;
+}
+[tooltip][flow^="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #333;
+    right: 15%;
+    transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+    top: 50%;
+    left: calc(88%);
+    transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]:hover::after{
+  animation: tooltips-horz 300ms ease-out forwards;
+  white-space: pre-line;
+      width: 300px !important;
+}
+[tooltip][flow^="left"]:hover::after,[tooltip][flow^="up"]:hover::after,[tooltip][flow^="doen"]:hover::after {
+  white-space: pre-line;
+  width: 300px !important;
+}
+
+.overtime_rate #overtime_rate_per_hour{
+      border-radius: 0px 5px 5px 0px !important;
+}

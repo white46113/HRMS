@@ -1,0 +1,7 @@
+textarea#description {
+    height: 40px;
+}
+
+.table thead tr th{
+	position: sticky !important;
+}

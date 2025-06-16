@@ -1,0 +1,231 @@
+.add-action {
+	font-size: 19px;
+    background: #206DFF !important;
+}
+.add-action i{
+	font-size: 18px;
+    background: white;
+    color: #206DFF !important;
+    margin-right: 6px;
+    border-radius: 4px;
+}
+.add-action span{
+	position: relative;
+    top: -2px;
+}
+.user-details-block {
+	background: #efeded !important;
+}
+
+.user-details-block img{
+	    border-radius: 65px;
+}
+.employee-detils {
+	    padding: 8px 0px 0px 29px !important;
+}
+.employee-detils span{
+	display: block;
+}
+.employee-detils .employee-name{
+	color: #000000 !important;
+    font-size: 16px;
+}
+.employee-detils .emp-grid-code{
+	color: #206DFF !important;
+}	
+.{
+	color: #868588;
+}
+.employee-detils .val-box {
+	color: #000000 !important;
+}
+#ui-datepicker-div {
+   z-index: 1060 !important;
+}
+
+.status-row span{
+    border-radius: 5px;
+    padding: 5px 10px !important;
+    border-radius: 7px !important;
+    font-size: 16px !important;
+    height: 26px !important;
+    line-height: 26px !important;
+}
+.status-row .approve{  
+	border: 1px solid #43A047;  
+	background: #ffffff !important;   
+	padding: 5px 10px;    
+	color: #43A047 !important;
+}
+.status-row .pending{  
+	border: 1px solid #FFA500;  
+	background: #ffffff !important;     
+	padding: 5px 10px;    
+	color: #FFA500 !important;
+}
+.status-row .reject{   
+	/*border: 1px solid #fff;*/
+	background: #fa6262 !important;    
+	padding: 5px 10px;    
+	color: #fff !important;
+}
+
+textarea#leave_reason{
+  height: 40px ;
+}
+
+
+.leave-list-table tbody td{
+	padding: 14px !important;
+}
+.dataTables_paginate .paginate_button {
+	 display: inline-flex !important;
+	    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0.375rem !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: .875rem !important;
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+padding: 0 1rem !important;
+font-weight: 700 !important;
+    font-size: 17px !important;
+        margin: 5px !important;
+
+}
+
+.dataTables_info {
+	font-size: 1rem;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody{
+	border-bottom: none !important;
+}
+.leave-popup-block .image-block {
+	width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: #fafafa;
+    display: grid;
+    place-content: center;
+    border: 2px solid #e0d6d6;
+    overflow: hidden;
+}
+.leave-popup-block .image-block img{
+	width: 95px;
+    border: 0px;
+    border-radius: 100%;
+    max-width: 100%;
+    height: 95px;
+    border: 2px solid #e5e5e5;
+    margin: 10px 0;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+	cursor: pointer;
+  display: inline-block;
+  background-color: #ddd;
+  padding: 11px 22px;
+  font-family: sans-serif, Arial;
+  font-size: 17px;
+  /*border: 2px solid #444;*/
+  border-radius: 10px !important;
+}
+.radio-toolbar label:first-of-type {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.radio-toolbar label:nth-of-type(2) {
+  position: relative;
+  left: -6px;
+}
+.radio-toolbar label:last-of-type {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  left: -12px;
+}
+
+
+i.fas {
+  margin-right: 3px;
+  font-size: 17px;
+
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+      top: 0px;
+}
+
+.radio-toolbar label:hover {
+  background-color: #5D87FF;
+  color: white;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: #206DFF !important;
+  color: white;
+  /*border-color: #4c4;*/
+}
+.radio-toolbar input[type="radio"]:checked + label .fa-check-circle{
+	color: #98a698 !important;
+}
+.radio-toolbar input[type="radio"]:checked + label .fa-times-circle{
+	color: #f24b4b !important;
+}
+
+
+tbody i{
+  font-size: 24px !important;
+}
+
+/* holiday */
+.modal .modal-dialog-centered .modal-footer button {
+    width: 22%;
+    font-size: 18px;
+}
+.modal .modal-lg .modal-footer button{
+  width: 16%;
+    font-size: 18px;
+}
+
+.select2-dropdown.select2-dropdown--below{
+      z-index: 1066;
+}
+.half-full-day-box .select2-container--default{
+      width: 88% !important;
+}
+.half-full-day-box  .select2-container .select2-selection--single{
+  height: 38px;
+  border: var(--bs-border-width) solid #DFE5EF;
+}
+.half-full-day-box  .select2-container .select2-selection__rendered {
+  padding-top: 4px;
+}
+.half-full-day-box .select2-container--default .select2-selection--single .select2-selection__arrow{
+      top: 5px;
+}
+
+.leave-popup-block textarea{
+      width: 88%;
+}
+
+
+/*filter */
+.select2-selection.select2-selection--single{
+  height: 40px;
+  border-radius: 7px;
+  border: var(--bs-border-width) solid #DFE5EF;
+}
+/*.select2-selection.select2-selection--single .select2-selection__rendered{
+      padding-top: 4px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 4px !important;
+}*/

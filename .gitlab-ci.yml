@@ -1,0 +1,12 @@
+include:
+  - local: ci-templates/deploy-template.yml
+    inputs:
+      client_name: HRMS_TEST
+      target_directory: $HRMS_TEST
+      deployed_file: test
+  
+  #- local: ci-templates/deploy-template.yml
+  #  inputs:
+  #    client_name: BSP_HRMS
+  #    target_directory: $HRMS_BSP
+  #    deployed_file: BSP_HRMS

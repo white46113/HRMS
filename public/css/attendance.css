@@ -1,0 +1,251 @@
+.cover-image {
+	border: 1px solid #ebdfdf;
+    border-radius: 9px;
+}
+
+.cover-image img{
+	border-radius: 8px;
+	    height: 480px;
+	        width: 359px;
+}
+
+.float-left {
+	float: left;
+}
+.text-right {
+	    text-align: right;
+}
+.text-left {
+	    text-align: left;
+}
+.titel-box{
+	font-size: 24px;
+    font-weight: 700;
+
+}
+
+.attendance-input input{
+    
+	border: none !important;
+    box-shadow: none;
+    position: relative;
+    left: -18px;
+    padding: 0px !important;
+    font-size: 24px;
+    font-weight: 700;
+}
+.attendance-input {
+	border-bottom: 1px solid #f1e2e2;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /*border-radius: 8px;*/
+}
+
+.attendance-input .form-control:disabled {
+	background-color:white !important;
+}
+.attendance-btn td {
+	border: none !important;
+	padding: 16px 13px;
+}
+.attendance-btn{
+	    /*border*/: 1px solid #e7dddd;
+    padding: 15px 15px 3px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /*border-radius: 5px;*/
+}
+.attendance-btn td button{
+	font-size: 24px;
+    font-weight: 800;
+    padding: 12px 31px;
+}
+.attendance-btn td span{
+	    font-size: 24px;
+    font-weight: 800;
+    padding: 12px 31px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: #2770ff;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.la-times-circle{
+	    font-size: 21px;
+}
+.cancel-btn {
+	padding: 11px 24px !important;
+}
+.submit-btn-box .btn{
+      width: 75% !important;
+}
+
+.attendance-in-out-block  img{
+    position: relative;
+    top: 27px;
+    left: 18px;
+    border-radius: 11px !important;
+    height: 76% !important;
+    border: 1px solid #eaeaff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}   
+
+.attendance-in-out-block  .employee-name {
+    font-size: 23px;
+    font-weight: 600;
+    color: black;
+}
+
+.attendance-in-out-block .employee-code{
+        color: gray;
+    font-weight: 600;
+
+}
+
+.attendance-in-out-block .employee-designation{
+        font-size: 16px;
+    font-weight: 500;
+    color: #5D87FF;
+}
+
+.attendance-in-block .la-fingerprint,.attendance-in-block .la-sign-out-alt{
+    font-size: 46px;
+}
+
+.attendance-in-block .attendance-lable {
+color: #5D87FF;
+}
+
+.attendance-in-block .form-check-input{
+    width: 3.188em !important;
+    height: 3.188em !important;
+    border-radius: 24px;
+    width: 4.188em !important;
+    height: 4.188em !important;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+.submit-block .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: blue !important;
+    border-color: blue !important;
+}
+
+.disable-box {
+    cursor: not-allowed !important;
+    opacity: .8;
+    background: #e3dfdf;
+}
+.tab-show-logo {
+        display: none ;
+}
+@media (max-width: 1000px){
+    .image-block{
+        display: none !important;
+    }
+    .tab-show-logo {
+        display: block !important;
+    }
+    
+}
+
+@media (max-width: 1400px){
+    
+     .main-block {
+        width: 100% ;
+    }
+    .cover-image img {
+    border-radius: 8px;
+    height: 466px;
+    width: 302px;
+}
+
+}
+@media (max-width: 500px){
+    .image-block{
+        display: none !important;
+    }
+    .main-block {
+        width: 100% !important;
+    }
+    .attendance-in-out-block img {
+    position: relative;
+    top: 27px;
+    left: 18px;
+    border-radius: 11px !important;
+    height: 65%;
+    } 
+     .attendance-in-out-block .employee-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+    }
+    .attendance-in-out-block .employee-designation {
+        font-size: 13px;
+        font-weight: 500;
+        color: #5D87FF;
+    }  
+
+}
+
+@media (max-width: 400px){
+    .image-block{
+        display: none !important;
+    }
+    .attendance-btn td button {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 10px 23px;
+    }
+    .attendance-in-out-block .employee-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    }
+    .attendance-in-out-block .employee-designation {
+        font-size: 11px;
+        font-weight: 500;
+        color: #5D87FF;
+    }
+    .attendance-in-out-block img {
+    /* width: 127%; */
+        position: relative;
+        top: 27px;
+        left: 18px;
+        border-radius: 11px !important;
+        height: 60%;
+    }
+    .attendance-in-block .attendance-lable {
+            width: 89% !important;
+    }
+
+    
+}
+.submit-block .btn-outline-primary {
+    width: 40% !important;
+        padding: 12px !important;
+
+}
+#sumbmit_attendance {
+   
+        padding: 12px !important;
+
+}
+.attendance-in-out-block .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+}
+.attendance-in-block .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+}
+.btn-label-danger {
+    color: #fff;
+    background-color: #d24250;
+    border-color: #d24250;
+}
+.btn-label-danger:hover {
+    color: #fff;
+    background-color: #dc1f31;
+    border-color: #dc1f31;
+}

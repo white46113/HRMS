@@ -1,0 +1,51 @@
+spec:
+  inputs:
+    client_name:
+      description: "Name of the client"
+    target_directory:
+      description: "Deployment directory on the server"
+      default: "$HRMS_TEST"
+    deployed_file:
+      description: "Deployment files"
+      default: "test"
+---
+#Deploy the changes by changed files only instead of copying everything
+deploy_to_$[[ inputs.client_name ]]:
+  stage: deploy
+  image: ubuntu:latest
+  before_script:
+    - echo "Deploying to client $[[ inputs.client_name ]]"
+    - echo "Target directory $[[ inputs.target_directory ]]"
+    - apt-get update && apt-get install -y git zip openssh-client
+    - echo "CI_COMMIT_BEFORE_SHA - $CI_COMMIT_BEFORE_SHA"
+    - echo "CI_COMMIT_SHA -$CI_COMMIT_SHA"
+    - mkdir -p $HOME/.ssh
+    - echo "$SSH_PRIVATE_KEY" > $HOME/.ssh/git-godaddy_rsa
+    - chmod 600 $HOME/.ssh/git-godaddy_rsa
+    - ssh-keyscan "$SFTP_HOST" >> $HOME/.ssh/known_hosts
+  script:
+    # Handle first commit and fetch changed files
+    - |
+      if [ -z "$CI_COMMIT_BEFORE_SHA" ]; then
+        echo "First commit, comparing with the initial commit"
+        #$(git diff --name-only $CI_COMMIT_SHA^ $CI_COMMIT_SHA) > $[[ inputs.deployed_file ]]_changes.txt
+        git diff --name-only $CI_COMMIT_BEFORE_SHA $CI_COMMIT_SHA > "$[[ inputs.deployed_file ]]_changes.txt"
+      else
+       git diff --name-only $CI_COMMIT_BEFORE_SHA $CI_COMMIT_SHA > "$[[ inputs.deployed_file ]]_changes.txt"
+      fi
+
+    # Debugging: Print the changed files
+    - echo "Changed files:"
+    - cat "$[[ inputs.deployed_file ]]_changes.txt"
+    - scp -i $HOME/.ssh/git-godaddy_rsa $[[ inputs.deployed_file ]]_changes.txt $SFTP_USERNAME@$SFTP_HOST:$[[ inputs.target_directory ]]/deploy_logs/
+    - scp -i $HOME/.ssh/git-godaddy_rsa $[[ inputs.deployed_file ]]_changes.txt $SFTP_USERNAME@$SFTP_HOST:$[[ inputs.target_directory ]]/deploy_logs/temp_changes.txt
+    - ssh -i $HOME/.ssh/git-godaddy_rsa "$SFTP_USERNAME@$SFTP_HOST" "echo -e \"\n\n**** Deployment Start \$(TZ='Asia/Kolkata' date) ****\" >> $[[ inputs.target_directory ]]/deploy_logs/deployment_history_log.txt && cat $[[ inputs.target_directory ]]/deploy_logs/temp_changes.txt >> $[[ inputs.target_directory ]]/deploy_logs/deployment_history_log.txt && echo '****** Deployment End ******' >> $[[ inputs.target_directory ]]/deploy_logs/deployment_history_log.txt && rm $[[ inputs.target_directory ]]/deploy_logs/temp_changes.txt"
+    - zip changes.zip -@ < $[[ inputs.deployed_file ]]_changes.txt
+    - scp -i $HOME/.ssh/git-godaddy_rsa changes.zip $SFTP_USERNAME@$SFTP_DADDY_HOST:$[[ inputs.target_directory ]]/
+    - ssh -i $HOME/.ssh/git-godaddy_rsa $SFTP_USERNAME@$SFTP_DADDY_HOST "export TERM=xterm-256color; cd $[[ inputs.target_directory ]] && unzip -o changes.zip && rm changes.zip"
+    # access logs at : https://arominfotech.com/test_cicd/erp/deploy_logs/<client_name>_changes.txt
+
+  #allow user to manually deploy those files instead of automatic.
+  when: manual
+  environment:
+    name: $[[ inputs.client_name ]]

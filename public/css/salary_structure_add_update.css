@@ -1,0 +1,234 @@
+.custom-modal-content {
+	    border: 0 !important;
+    background: var(--color-white) !important;
+    color: var(--th-color) !important;
+    border-radius: 10px;
+    padding: 0px 5px;
+        font-family: var(--white-theme-font-family-medium) !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column {
+    /*overflow-y: unset !important;*/
+    height: 100% !important;
+}
+.label_compulsory input{
+    border: 1px solid white;
+    width: 1px !important;
+    height: 23px !important;
+    border-radius: unset;
+    margin-top: -3px;
+    vertical-align: middle;
+    margin-right: 9px;
+    
+}
+.column-view-parent .inner-title {
+	font-size: 19px !important;
+    color: #000000 !important;
+    text-transform: inherit;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 18px;
+    margin: 20px 0 0 0;
+}
+.chosen-container-single .chosen-search {
+        padding: 5px 8px !important;
+}
+.timesheet-container .form-contain.company-detail-box input {
+    /*border: 1px solid #e4e4e4;*/
+    border-radius: 5px !important;
+       height: 48px !important;
+    padding: 0px 11px !important;
+    width: 100% !important;
+}
+.timesheet-container .form-contain #component-table input.number_box{
+        width: 50% !important;
+            margin: auto;
+}
+.timesheet-container #component-table input.form-check-input  {
+    border: 1px solid #e4e4e4;
+    border-radius: 5px !important;
+    height: 23px !important;
+    padding: 0px 11px !important;
+    width: 3px !important;
+}
+.timesheet-container .form-contain .form-label{
+	width: 100%;
+    color: #555555;
+    font-size: 15px !important;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+.timesheet-container .form-contain 	.input-group {
+	width: calc(100% - 16px) !important;
+}
+.timesheet-container .form-contain .form-input-box{
+	    margin-bottom: 17px;
+}
+.select2-container--default .select2-selection--single{
+	border-radius: 5px !important;
+    height: 48px !important;
+}
+
+
+.component_name{
+        width: 50%;
+        margin: auto;
+            text-align: center;
+}
+.chosen-container.chosen-container-single {
+    width: 50% !important;
+}
+.chosen-container {
+    text-align: left !important;
+}
+.dataTables_empty{
+    background: #ffffff !important;
+}
+
+.form-check-input.disabled_check {
+    cursor: not-allowed !important;
+    opacity: .8 !important;
+    pointer-events:none;
+}
+
+#component-table tbody {
+        border: 1px solid #f1f1f1;
+}
+
+#component-table .used_component td{
+    background: #bcffbc !important;
+        color: #443a3a !important;
+}
+#component-table .used_component td input{
+    border: 1px solid #ffffff ;
+}
+.two-block-view .status_color ul {
+    color: #555555 !important;
+    font-size: 16px !important;
+}
+.two-block-view .status_color ul li {
+    list-style: none;
+    float: left;
+    margin-left: 18px;
+    letter-spacing: 0.25px !important;
+    font-family: system-ui;
+}
+.two-block-view .status_color ul li span{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 9px;
+    margin-top: -5px;
+    vertical-align: middle;
+}
+.label_used span{
+    background-color: #bcffbc;
+}
+
+.form-check-input.disabled_check:checked[type=checkbox] {
+    background: url(../../public/assets/images/images/checked_green.png) no-repeat;
+    background-size: 21px !important;
+}
+.label_compulsory .form-check-input.disabled_check:checked[type=checkbox]{
+    background-size: 22px !important;
+    /*margin-top: 1px;*/
+}
+
+
+
+
+
+/* table */
+.timesheet-container .form-table-row{
+    border: 0 !important;
+    background: #fff;
+        display: block;
+    overflow: auto;
+}
+.timesheet-container .form-table-row table {
+        width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    position: relative;
+    top: -1px;
+    border-radius: 2px;
+    padding-bottom: 1px;
+}
+.timesheet-container .form-table-row table thead{
+    background: #f8f8f8;
+    color: #0a0a0a;
+    border: 1px solid #f1f1f1;
+
+}
+.timesheet-container .form-table-row table thead tr{
+    box-shadow: 0 1px 0px rgba(255, 255, 255, 1);
+    background: transparent;
+}
+.timesheet-container .form-table-row table thead tr th{
+        letter-spacing: 0.25px !important;
+    min-width: 50px;
+    border-top-left-radius: 2px;
+        color: #222 !important;
+    border-left: 0 !important;
+        font-size: 16px !important;
+    font-weight: 500 !important;
+    background: #f2f5f7 !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column th:last-child {
+    border-top-right-radius: unset !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column th:first-child {
+    border-top-left-radius: unset;
+}
+.timesheet-container .custom-content-table-with-fixed-column th:first-child {
+    border-top-left-radius: 0px !important; 
+}
+.timesheet-container table tbody tr:nth-child(even) td{
+    border-bottom: 0;
+    background-color: #f9f9f9 !important;
+}
+.timesheet-container table tbody tr{
+    border: none;
+}
+.timesheet-container td{
+    color: #555555 !important;
+}
+.timesheet-container tr.used_component.component_row {
+    border-bottom: 2px solid white;
+}
+
+.timesheet-container table tbody tr td{
+    padding-left: 10px !important;
+    padding: 0px 5px !important;
+    min-width: inherit !important;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.03px !important;
+    padding-right: 10px !important;
+    border: none !important;
+    background: var(--color-white) !important;
+}
+.description{
+        height: 40px;
+}
+.is_compulsory {
+    cursor: pointer;
+}
+.action-btn-align{
+    text-align: center;
+}
+.action-btn-align .btn{
+        width: 8%;
+}
+.form-control.error,.form-select.error,.form-check-input.error{
+    border: 1px solid red !important;
+}
+.form-select.error + div.chosen-container {
+   border: 1px solid red !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column td{
+        text-align: unset ;
+}

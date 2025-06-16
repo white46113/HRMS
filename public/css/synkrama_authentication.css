@@ -1,0 +1,85 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.custom_btn{
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-radius: 20px !important;
+  background-color: #007bc7 !important;
+}
+.login-container {
+  border-bottom: 10px solid rgba(0, 123, 199, 0.3);
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+  margin-top: 10px;
+}
+label {
+  margin-bottom: 0 !important;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.error{
+  color: red !important;
+}
+#logo{
+  width: 50%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header-logo {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: rgba(0, 123, 199, 0.3);
+}
+.password-icon {
+  position: relative;
+  float: right;
+  top: -28px;
+  right: 5px;
+}
+.password-login-icon{
+  position: relative;
+  float: right;
+  top: -30px;
+  right: 5px;
+}
+.form-control{
+  border-radius: 0 5px 5px 0 !important;
+}
+.input-group-text{
+  border-radius: 5px 0px 0px 5px !important;
+}
+.no_radius{
+  border-radius: 0 0 0 0 !important;
+}
+#country_id{
+  max-width: 110px !important;
+  padding-left: 5px;
+  padding-right: 0px;
+}
+#country_id option{
+  font-size: 12px;
+}
+.text-bold{
+  font-weight: bold;
+}
+.toast-error{
+  background-color: red !important;
+}
+.toast-success{
+  background-color: green !important;
+}

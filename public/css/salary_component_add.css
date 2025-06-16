@@ -1,0 +1,135 @@
+
+.custom-modal-content {
+	    border: 0 !important;
+    background: var(--color-white) !important;
+    color: var(--th-color) !important;
+    border-radius: 10px;
+    padding: 0px 0px;
+        font-family: var(--white-theme-font-family-medium) !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column {
+    overflow-y: unset;
+    height: 100%;
+}
+.timesheet-container .tabTitle{
+	    display: inline-block;
+    width: 100%;
+    padding: 0 !important;
+    border: 0;
+}
+.timesheet-container .tabTitle h2{
+	    margin: 20px !important;
+    letter-spacing: 0.04px;
+    color: #1B252F !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    display: inline-block;
+}
+.timesheet-container .form-table-row{
+	border: 0 !important;
+    background: #fff;
+}
+.timesheet-container .form-table-row table {
+	    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    position: relative;
+    top: -1px;
+    border-radius: 2px;
+    padding-bottom: 1px;
+}
+.timesheet-container .form-table-row table thead{
+	background: #f8f8f8;
+    color: #0a0a0a;
+    border: 1px solid #f1f1f1;
+
+}
+.timesheet-container .custom-content-table-with-fixed-column th:last-child {
+    border-top-right-radius: unset;
+}
+.timesheet-container .form-table-row table thead tr{
+	box-shadow: 0 1px 0px rgba(255, 255, 255, 1);
+    background: transparent;
+}
+.timesheet-container .form-table-row table thead tr th{
+	    letter-spacing: 0.25px !important;
+	min-width: 50px;
+    border-top-left-radius: 2px;
+        color: #222 !important;
+    border-left: 0 !important;
+        font-size: 16px !important;
+    font-weight: 500 !important;
+    background: #eaeaea !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column th:first-child {
+    border-top-left-radius: unset;
+}
+.timesheet-container table tbody tr:nth-child(even) td{
+    border-bottom: 0;
+    background-color: #f7f9fb !important;
+}
+.timesheet-container table tbody tr{
+	border: none;
+}
+.timesheet-container table tbody tr td{
+	background: #f7f9fb !important;
+    padding-left: 10px !important;
+    padding: 0px 5px !important;
+    min-width: inherit !important;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.03px !important;
+    padding-right: 10px !important;
+    border: none !important;
+    background: #fff !important;
+}
+.description{
+	    height: 40px;
+}
+.is_compulsory {
+	cursor: pointer;
+}
+.action-btn-align{
+	text-align: center;
+}
+.action-btn-align .btn{
+	    width: 8%;
+}
+.form-control.error,.form-select.error,.form-check-input.error{
+	border: 1px solid red !important;
+}
+.form-select.error + div.chosen-container {
+   border: 1px solid red !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.timesheet-container .custom-content-table-with-fixed-column td{
+	    text-align: unset ;
+}
+
+
+.chosen-container a.chosen-single{
+    width: 100%;
+}
+.button-action-box .company-box {
+        width: 23%;
+        padding: 0px 10px 0px 10px;
+}
+.action-box {
+   
+     padding: 10px;
+}
+.button-action-box{
+    padding: 10px;
+}
+.button-action-box .chosen-container.chosen-container-single {
+    height: 44px !important;
+}
+.button-action-box .chosen-container.chosen-container-single a {
+    height: 44px !important;
+}
+.chosen-container.chosen-container-single a{
+        line-height: 34px !important;
+}

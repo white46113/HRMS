@@ -1,0 +1,87 @@
+.timesheet-container .custom-content-table-with-fixed-column{
+	    overflow-y: unset !important;
+	    height: auto !important;
+}
+.select2-container--open {
+	z-index: 1055 !important;
+}
+.in-time-correction-box .select2-container--default {
+	width: 100% !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+	margin-left: 5px !important;
+}
+
+
+.dataTables_info {
+	font-size: 1rem;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody{
+	border-bottom: none !important;
+}
+
+
+/* aprove block */
+.user-details-block {
+    background: #efeded !important;
+}
+
+.user-details-block img{
+        border-radius: 65px;
+}
+.employee-detils {
+        padding: 8px 0px 0px 29px !important;
+}
+.employee-detils span{
+    display: block;
+}
+.employee-detils .employee-name{
+    color: #000000 !important;
+    font-size: 16px;
+}
+.employee-detils .emp-grid-code{
+    color: #206DFF !important;
+}   
+.{
+    color: #868588;
+}
+.employee-detils .val-box {
+    color: #000000 !important;
+}
+.title-box-title {
+    color: #000;
+    font-weight: 600 !important;
+}
+.title-box-title:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 8% !important;
+    margin-top: 2px;
+    background: #898989;
+    height: 2px;
+}
+.updated-by-block  button{
+        background: none !important;
+    border: var(--bs-nav-tabs-border-width) solid transparent !important;
+    border-top-left-radius: var(--bs-nav-tabs-border-radius) !important;
+    border-top-right-radius: var(--bs-nav-tabs-border-radius) !important;  
+}
+.updated-by-block  button label{
+    font-size: 16px;
+}
+.dataTables_wrapper.no-footer .dt-buttons {
+    position: absolute;
+    top: -57px;
+    right: 427px;
+}
+.dataTables_length select::after {
+  content: '\25BC'; /* Unicode for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 20px; /* Increase font size to increase arrow size */
+  color: red !important; /* Arrow color */
+}

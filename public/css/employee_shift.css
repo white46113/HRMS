@@ -1,0 +1,20 @@
+.dataTables_wrapper.no-footer .dt-buttons {
+    position: fixed;
+    top: 98px;
+    right: 255px;
+ }
+ .dataTables_filter{
+ display:none;
+}
+.dataTables_wrapper.no-footer .dt-buttons {
+        position: absolute;
+    top: -58px;
+    right: 281px;
+}
+.timesheet-container .custom-content-table-with-fixed-column {
+    overflow-y: unset;
+    
+}
+.text-center {
+	text-align: center !important;
+}

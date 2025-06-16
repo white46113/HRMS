@@ -1,0 +1,82 @@
+label.error {
+	margin-bottom: 0px !important;
+}
+.contain-box-block {
+	width: 500px !important;
+}
+.login-label {
+	font-family: 'Roboto'!important;
+	position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    max-height: inherit;
+    overflow: visible;
+    background: #fff !important;
+    /* margin: 0 0 20px !important; */
+    height: 100%;
+    display: grid;
+    float: left;
+    align-items: center;
+    text-align: center;
+        font-size: 22px;
+    font-weight: bold;
+    text-transform: none !important;
+    color: #000 !important;
+    padding: 4px 0;
+}
+
+.login-label:before {
+
+    height: 1px;
+    width: 400px;
+    z-index: -1;
+    content: "";
+    position: relative;
+    /* left: 50px; */
+    top: 18px;
+    bottom: 0px;
+    margin: auto;
+    background: #e1e1e1;
+}
+.login-label:after {
+        width: 120px;
+    background: #fff;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    content: "";
+    top: 8px;
+    z-index: -1;
+}
+.login-label-msg{
+	color: #868588;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+        margin-bottom: 25px;
+}
+/*.password-icon {
+    position: relative;
+    float: right;
+    top: -28px;
+    right: 11px;
+        font-size: 20px;
+}*/
+.user-icon {
+    cursor: default;
+    position: relative;
+    float: right;
+    top: -28px;
+    right: 9px;
+    font-size: 17px;
+}
+.input-group .input-group-text.date-picker-addon i, .input-group .input-group-text.time-picker-addon i {
+    font-size: 24px !important;
+    
+}

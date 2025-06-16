@@ -1,0 +1,167 @@
+ .file-input-wrapper {
+        /* position: relative;
+    overflow: hidden;
+    display: inline-block; */
+        display: inline;
+        width: 100%;
+        /*padding: 8px 16px;*/
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #5a6a85;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 7px;
+
+        -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    }
+
+    .file-input-wrapper input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .file-input-wrapper .chose-file {
+        display: inline-block;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f5f5f5;
+        color: #444;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .file-input-wrapper .file-input-name label {
+        cursor: pointer;
+    }
+    .don {
+        border: 1px solid #ccc;
+        padding: 6px 12px;
+        font-size: 16px;
+        border-radius: 4px;
+        display: inline-block;
+        /* font-weight: lighter; */
+        color: #666666;
+        width: 86%;
+    }
+    #imageContainer img {
+        width: 12%;
+    }
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        counter-reset: step;
+        margin: auto;
+        width: 50%;
+        position: relative;
+        left: 15% !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .don {
+            width: auto;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    .form-check-input {
+        --bs-form-check-bg: transparent;
+        width: 1.388em;
+        height: 1.388em;
+    }
+    .next,
+    .back,
+    .discard,
+    .submit {
+        width: 10%;
+    }
+
+    .update-file-block label {
+        /* width: 14% !important; */
+        cursor: pointer;
+        /*border-radius: 5px 0px 0px 5px !important;*/
+        /*background: #f3eaf5 !important;*/
+    }
+
+    .update-file-block input {
+        border-radius: 5px 0px 0px 5px !important;
+        pointer-events: none;
+        height: 39px;
+    }
+    .update-file-block label {
+        /*border-radius: 5px 0px 0px 5px !important;*/
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+    .update-imeg-file img {
+        width: 50%;
+        height: 72px;
+    }
+    .title-block button {
+    font-size: 19px;
+    background: #206DFF !important;
+    width: 10%;
+}
+.add-action i {
+    font-size: 18px;
+    background: white;
+    color: #206DFF !important;
+    margin-right: 9px;
+    border-radius: 4px;
+}
+#company_form .row .col label.form-label,#company_form .row .col-6 label.form-label{
+      width: 100%;
+    color: #555555;
+    font-size: 15px !important;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+#company_form .row .col input.form-control,#company_form  .row .col-6 input.form-control{
+    border-radius: 5px;
+    height: 48px ;
+    padding: 0px 11px;
+    width: 100% ;
+        font-size: 16px !important;
+}
+#company_form .row .col input.form-check-input {
+    width: 1.588em;
+    height: 1.588em;
+}
+#company_form .row .col .form-check-label {
+     padding: 4px 0px 2px 2px;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 2px;
+}
+#company_form .update-file-block input{
+        height: 47px;
+  width: 85% !important;
+}
+#company_form .update-file-block label{
+  
+  /*padding: 12px 16px;*/
+}
+
+#company_form #profile_image_name{
+      /*padding: 8px 16px !important;*/
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 2.5;
+        
+}
+.address-block .title-block label{
+        padding-top: 20px;
+    margin-bottom: 0px !important;
+}
+.title-block label {
+    width: 90%;
+}

@@ -1,0 +1,174 @@
+.add-action {
+	font-size: 19px;
+    background: #206DFF !important;
+}
+.add-action i{
+	font-size: 18px;
+    background: white;
+    color: #206DFF !important;
+    margin-right: 6px;
+    border-radius: 4px;
+}
+.add-action span {
+    position: relative;
+    top: 0px;
+    font-family: 'Gilroy', sans-serif !important;
+}
+.user-details-block {
+	background: #efeded !important;
+}
+
+.user-details-block img{
+	    border-radius: 65px;
+}
+.employee-detils {
+	    padding: 8px 0px 0px 29px !important;
+}
+.employee-detils span{
+	display: block;
+}
+.employee-detils .employee-name{
+	color: #000000 !important;
+    font-size: 16px;
+}
+.employee-detils .emp-grid-code{
+	color: #206DFF !important;
+}	
+.{
+	color: #868588;
+}
+.employee-detils .val-box {
+	color: #000000 !important;
+}
+#ui-datepicker-div {
+   z-index: 1060 !important;
+}
+.leave-box .input-group {
+	width: 88% !important;
+}
+
+
+
+textarea#leave_reason{
+  height: 40px ;
+}
+
+
+.leave-list-table tbody td{
+	padding: 14px !important;
+}
+.dataTables_paginate .paginate_button {
+	 display: inline-flex !important;
+	    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0.375rem !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: .875rem !important;
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+padding: 0 1rem !important;
+font-weight: 700 !important;
+    font-size: 17px !important;
+        margin: 5px !important;
+
+}
+
+.dataTables_info {
+	font-size: 1rem;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody{
+	border-bottom: none !important;
+}
+.leave-popup-block .image-block {
+	width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: #fafafa;
+    display: grid;
+    place-content: center;
+    border: 2px solid #e0d6d6;
+    overflow: hidden;
+}
+.leave-popup-block .image-block img{
+	width: 95px;
+    border: 0px;
+    border-radius: 100%;
+    max-width: 100%;
+    height: 95px;
+    border: 2px solid #e5e5e5;
+    margin: 10px 0;
+}
+
+
+
+
+i.fas {
+  margin-right: 3px;
+  font-size: 17px;
+
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+      top: 0px;
+}
+
+
+
+tbody i{
+  font-size: 24px !important;
+}
+
+/* holiday */
+.modal .modal-dialog-centered .modal-footer button {
+    width: 22%;
+    font-size: 18px;
+}
+.modal .modal-lg .modal-footer button{
+  width: 16%;
+    font-size: 18px;
+}
+
+.select2-dropdown.select2-dropdown--below{
+      z-index: 1066;
+}
+.half-full-day-box .select2-container--default{
+      width: 88% !important;
+}
+.half-full-day-box  .select2-container .select2-selection--single{
+  height: 38px;
+  border: var(--bs-border-width) solid #DFE5EF;
+}
+.half-full-day-box  .select2-container .select2-selection__rendered {
+  padding-top: 4px;
+}
+.half-full-day-box .select2-container--default .select2-selection--single .select2-selection__arrow{
+      top: 5px;
+}
+
+.leave-popup-block textarea{
+      width: 88%;
+}
+
+
+/*filter */
+.select2-selection.select2-selection--single{
+  height: 40px;
+  border-radius: 7px;
+  border: var(--bs-border-width) solid #DFE5EF;
+}
+/*.select2-selection.select2-selection--single .select2-selection__rendered{
+      padding-top: 4px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 4px !important;
+}*/
+.note-box {
+	font-size: 13px;
+    margin: 14px;
+    color: #7C8FAC;
+}
+.note-box lable{
+	color: red;
+    font-size: 17px;
+}

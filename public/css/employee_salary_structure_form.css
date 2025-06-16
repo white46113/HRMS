@@ -1,0 +1,46 @@
+.timesheet-container .title-contain-box h3,.timesheet-container .title-contain-box h3 a{
+	    font-size: 22px;
+    margin-bottom: 10px;
+    color: #1B252F;
+}
+
+.timesheet-container .title-contain-box .title-box{
+	    line-height: 28px !important;
+	    font-size: 16px !important;
+    color: #7E7E7E !important;
+}
+.timesheet-container .title-contain-box .value-box{
+	    font-size: 16px !important;
+    color: #000 !important;
+    max-width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 28px !important;
+}
+.title-contain-bloack .form-control,.title-contain-bloack .input-group{
+	width: 75% !important;
+}
+.hide {
+	display: none;
+}
+#component-table tbody {
+	    border: 1px solid #f1f1f1;
+}
+.timesheet-container .custom-content-table-with-fixed-column th:last-child {
+    border-top-right-radius: unset !important;
+}
+#component-table .used_component td {
+    background: unset !important;
+    color: #443a3a !important;
+}
+label.error {
+	margin-bottom: 0px !important;
+	margin-top: 0px !important;
+}
+
+
+.input-group .input-group-text.date-picker-addon i, .input-group .input-group-text.time-picker-addon i {
+    font-size: 26px !important;
+    /*padding-top: 3px !important;*/
+}
