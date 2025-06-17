@@ -125,7 +125,9 @@ $route['employee-salary-structure-update.html'] = 'salary/employee_salary_strucu
 $route['pdf.html'] = 'salary/generate_pdf';
 $route['salary-calc'] = 'salary/employeeSalaryCalculation';
 
-$route['attendence_report'] = 'reports/attendenceReport';
+// $route['attendence_report_ajax'] = 'reports/attendenceReport';
+$route['attendence_report'] = 'reports/attandenceReportColumn';
+
 
 /* API */
 $route['check_company_exit'] = 'user/check_company_code';

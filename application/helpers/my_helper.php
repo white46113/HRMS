@@ -165,6 +165,7 @@ function date_formater($value){
 function date_formate($value){
 	$date = "";
 	if($value != "" && $value != null){
+		
 		$date = DateTime::createFromFormat('m/d/Y', $value);
 	    $date = $date->format('d-m-Y');
 	}else{
@@ -301,6 +302,39 @@ function wordConvertor($amount = 0){
   $result = implode('', $str);
   return $result;
 }
+function formatDate($input, $inputFormat = 'm/d/Y', $outputFormat = 'd-m-Y') {
+    if (empty($input)) {
+        return null;
+    }
 
+    $date = DateTime::createFromFormat($inputFormat, $input);
+    
+    if ($date === false) {
+        // Try alternative formats if needed
+        $date = DateTime::createFromFormat('Y-m-d', $input);
+        if ($date === false) {
+            throw new Exception("Failed to parse date: $input");
+        }
+    }
+    
+    return $date->format($outputFormat);
+}
+
+function formatStandardDateTime($input, $outputFormat = 'd-m-Y H:i:s') {
+    if (empty($input)) {
+        return null;
+    }
+
+    // Explicitly specify the input format matches Y-m-d H:i:s
+    $date = DateTime::createFromFormat('Y-m-d H:i:s', $input);
+    
+    if ($date === false) {
+        $errors = DateTime::getLastErrors();
+        error_log("DateTime parsing failed for '$input'. Errors: " . print_r($errors, true));
+        return null;
+    }
+    
+    return $date->format($outputFormat);
+}
 
 ?>

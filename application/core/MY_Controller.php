@@ -45,7 +45,7 @@ class MY_Controller extends CI_Controller
 		      }
 		    }
 
-            // pr($this->config,1);                                                             
+        // pr($this->config,1);                                                             
 		    $ajax_json = $this->session->userdata();
 		    $this->smarty->assign("user_data", $ajax_json);
 		    $ajax_json = $this->session->userdata();
