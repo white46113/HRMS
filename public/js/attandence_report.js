@@ -7,17 +7,18 @@ const page = {
     init: function(){
         this.dataTable();
         this.filter();
+        this.initDateRangePicker();
     },
     dataTable: function(){
         var data = this.serachParams();
-       table = new DataTable("#attandence_report", {
+        table = new DataTable("#attandence_report", {
         dom: 'Bfrtilp',
         buttons: [
         {     
             extend: 'csv',
             text: '<i class="ti ti-file-type-csv"></i>',
             titleAttr: 'Download CSV',
-            filename: 'employee_attendance',
+            filename: 'attendance_report',
             exportOptions: {
                 columns: [0, 1, 2, 3] // Only export visible columns
             },
@@ -30,7 +31,7 @@ const page = {
             extend: 'pdf',
             text: '<i class="ti ti-file-type-pdf"></i>',
             titleAttr: 'Download PDF',
-            filename: 'employee_attendance',
+            filename: 'attendance_report',
             title: 'Employee Attendance Report',
             exportOptions: {
                 columns: [0, 1, 2, 3] // Only export visible columns
@@ -105,21 +106,17 @@ const page = {
                 action_html = data[i]['other_Action'];
             }
             
-             html += '<div class="col-3"><div class="card mb-4"><div class="grid_view_warehouse"><div class="grid_view_warehouse_box h-auto"><div class="grid_view_warehouse_title mb-0"><div class="grid_view_warehouse_title_lt"><div class="grid_view_warehouse_title_icon"><div class="status-radius '+(data[i]['status_val']).toLowerCase()+'"></div><img src="'+data[i]['image_url']+'" width="62" height="62" class="list-image ma_profile_image" /></div><div class="grid_view_warehouse_title_cnt p-3"><h5 class="trim-characters"><a href="'+data[i]['employee_url']+'" class="inline-edit-link" title="'+data[i]['name']+'">'+data[i]['name']+'</a></h5><h6 class="trim-characters">'+data[i]['employee_code']+'</h6></div></div></div><div class="grid-types"><div class="request_type"><strong>Group Name</strong>Employee</div><div class="other-actions-list-btn mt-0 mr-2">'+action_html+'</div></div><div class="usage_type_box"><div class="label_text" ><span>User Email</span><label>'+data[i]['email']+'</label></div><div class="label_text" ><span>Department</span><label>'+data[i]['department']+'</label></div><div class="label_text" ><span>Designation</span><label>'+data[i]['designation']+'</label></div><div class="label_text"><span>Joining Date</span><label>'+data[i]['joining_date']+'</label></div></div></div></div></div></div>';
+             html += '<div class="col-3"><div class="card mb-4"><div class="grid_view_warehouse"><div class="grid_view_warehouse_box h-auto"><div class="grid_view_warehouse_title mb-0"><div class="grid_view_warehouse_title_lt"><div class="grid_view_warehouse_title_icon"><div class="status-radius '+(data[i]['status_val'])?.toLowerCase()+'"></div><img src="'+data[i]['image_url']+'" width="62" height="62" class="list-image ma_profile_image" /></div><div class="grid_view_warehouse_title_cnt p-3"><h5 class="trim-characters"><a href="'+data[i]['employee_url']+'" class="inline-edit-link" title="'+data[i]['name']+'">'+data[i]['name']+'</a></h5><h6 class="trim-characters">'+data[i]['employee_code']+'</h6></div></div></div><div class="grid-types"><div class="request_type"><strong>Group Name</strong>Employee</div><div class="other-actions-list-btn mt-0 mr-2">'+action_html+'</div></div><div class="usage_type_box"><div class="label_text" ><span>User Email</span><label>'+data[i]['email']+'</label></div><div class="label_text" ><span>Department</span><label>'+data[i]['department']+'</label></div><div class="label_text" ><span>Designation</span><label>'+data[i]['designation']+'</label></div><div class="label_text"><span>Joining Date</span><label>'+data[i]['joining_date']+'</label></div></div></div></div></div></div>';
           }
           $(".dropdown-menu li").removeClass("active");
           html += '</div></div>';
           $("#example_wrapper .grid-block").remove();
           $("#example_wrapper .dataTables_scroll").after("<div class='grid-block' style='display:none'>"+html+"</div>")
-          if(grid_type == "Table"){
-                $(".dropdown-menu li.table").addClass("active");
-                $("#example_wrapper .dataTables_scroll").show()
-                $(".grid-block").hide()
-          }else{
-                $(".dropdown-menu li.grid").addClass("active");
-                $(".grid-block").show()
-                $("#example_wrapper .dataTables_scroll").hide()
-          }
+         
+            $(".dropdown-menu li.table").addClass("active");
+            $("#example_wrapper .dataTables_scroll").show()
+            $(".grid-block").hide()
+        
           setTimeout(function(){
             hide_loader()
           },1000)
@@ -165,14 +162,30 @@ const page = {
         })
     },
     serachParams: function(){
-        var part_id = $("#selectPart").val();
-        var params = {part_id:part_id};
+        let employee_id = $("#employee_drop_down").val();
+        let date_range = $('#daterange').val();
+        const [startDate, endDate] = date_range.split(' - ');
+        var params = {employee_id:employee_id,startDate:startDate,endDate:endDate};
         return params;
     },
     resetFilter: function(){
-        $("#selectPart").val('').trigger('change');
+        $("#employee_drop_down").val('').trigger('change');
         table.destroy(); 
         this.dataTable();
+        $('#daterange').data('daterangepicker').remove();
+        this.initDateRangePicker();
+    },
+    initDateRangePicker: function(){
+        const start = moment().startOf('month'); // e.g., 01-06-2025
+        const end = moment().endOf('month');     // e.g., 30-06-2025
+        $('#daterange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            opens: 'right',
+            locale: {
+                format: 'DD-MM-YYYY'
+            }
+        });
     }
 }
 

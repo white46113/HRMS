@@ -25,80 +25,16 @@
                                 <ul id="sidebarnav" class="in">
                                     <div class="filter-row">
                                         <li class="nav-small-cap">
-                                            <span class="hide-menu">Status</span>
+                                            <span class="hide-menu">Employee</span>
                                             <span class="search-show-hide float-right"><i class="ti ti-minus"></i>
                                             </span>
                                         </li>
                                         <li class="sidebar-item">
                                             <div class="input-group">
-                                              <select class="form-select form-control" name="status_drop_down" id="status_drop_down">
-                                                <option value="" >Select Status</option>
-                                                    <option value="Active" >Active</option>
-                                                    <option value="Inactive" >Inactive</option>
-                                                    <option value="Pending" >Pending</option>
-                                                    <option value="Block" >Block</option>
-                                                </select>
-                                            </div>
-                                        </li>
-                                    </div>
-                                    <div class="filter-row">
-                                        <li class="nav-small-cap">
-                                            <span class="hide-menu">Name</span>
-                                            <span class="search-show-hide float-right"><i class="ti ti-minus"></i></span>
-                                        </li>
-                                        <li class="sidebar-item">
-                                            <div class="input-group">
-                                              <input type="text" id="employee_name_search" class="form-control" placeholder="Name">
-                                            </div>
-                                        </li>
-                                    </div>
-                                    <div class="filter-row">
-                                        <li class="nav-small-cap">
-                                            <span class="hide-menu">Employee Code</span>
-                                            <span class="search-show-hide float-right"><i class="ti ti-minus"></i></span>
-                                        </li>
-                                        <li class="sidebar-item">
-                                            <div class="input-group">
-                                              <input type="text" id="employee_code_search" class="form-control" placeholder="Employee Code">
-                                            </div>
-                                        </li>
-                                    </div>
-                                    <div class="filter-row">
-                                        <li class="nav-small-cap">
-                                            <span class="hide-menu">Joining Date</span>
-                                            <span class="search-show-hide float-right"><i class="ti ti-minus"></i></span>
-                                        </li>
-                                        <li class="sidebar-item">
-                                            <div class="input-group ">
-                                              <input type="text" class="form-control" id="join_date_search"  placeholder="Joining Date">
-                                               <span class="input-group-text time-picker-addon date-picker-addon"><i class="las la-calendar-alt"></i></span>
-                                            </div>
-                                        </li>
-                                    </div>
-                                    <div class="filter-row">
-                                        <li class="nav-small-cap">
-                                            <span class="hide-menu">Email</span>
-                                            <span class="search-show-hide float-right"><i class="ti ti-minus"></i></span>
-                                        </li>
-                                        <li class="sidebar-item">
-                                            <div class="input-group">
-                                              <input type="text" id="email_search" class="form-control"  placeholder="Email">
-                                            </div>
-                                        </li>
-                                    </div>
-                                    <div class="filter-row">
-                                        <li class="nav-small-cap">
-                                            <span class="hide-menu">Department</span>
-                                            <span class="search-show-hide float-right"><i class="ti ti-minus"></i></span>
-                                        </li>
-                                        <li class="sidebar-item">
-                                            <div class="input-group ">
-                                              <!-- <input type="text" class="form-control" id="department_search"  placeholder="Department"> -->
-                                              <select class="form-select form-control" name="department_search" id="department_search" value="">
-                                                    <!-- <option value="" >Select Department</option> -->
-                                                    <option value=""></option>
-                                                    {{foreach from=$department key=key_val item=department_val}}
-                                                        <option value="{{$department_val['department_id']}}" >{{$department_val['department']}}</option>
+                                              <select class="form-select form-control" name="employee_drop_down" id="employee_drop_down">
+                                                <option value="" >Select Employee</option>
+                                                    {{foreach $employee_data as $key => $val}}
+                                                         <option value="{{$val['employee_id']}}" >{{$val['full_name']}}</option>
                                                     {{/foreach}}
                                                 </select>
                                             </div>
@@ -106,22 +42,17 @@
                                     </div>
                                     <div class="filter-row">
                                         <li class="nav-small-cap">
-                                            <span class="hide-menu">Designation</span>
+                                            <span class="hide-menu">Date</span>
                                             <span class="search-show-hide float-right"><i class="ti ti-minus"></i></span>
                                         </li>
                                         <li class="sidebar-item">
-                                            <div class="input-group ">
-                                              <!-- <input type="text" class="form-control" id="designation_search"  placeholder="Designation">  -->
-                                              <select class="form-select form-control" name="designation_search" id="designation_search">
-                                                    <option value="" ></option>
-                                                    
-                                                    {{foreach from=$designation key=key_val item=designation_val}}
-                                                        <option value="{{$designation_val['designation_id']}}" >{{$designation_val['designation']}}</option>
-                                                    {{/foreach}}
-                                                </select>
+                                            <div class="input-group">
+                                              <input type="text" id="daterange" class="form-control serarch-filter-input m-3 me-0" name="daterange" />
+                                                <span class="input-group-text time-picker-addon date-picker-addon"><i class="las la-calendar-alt"></i></span>
                                             </div>
                                         </li>
                                     </div>
+ 
                                 </ul>
                                
                             </div>
@@ -195,100 +126,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="week_off_add" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered ">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleLabel">Add week off</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="main-content">
-                <div class="card mb-3 in-time-correction-box">
-                    <input type="hidden"  value="" id="employee-id">
-                        <div class="row g-0 m-3">
-                            
-                            <div class="col-4">
-                                <div class="ms-3">
-                                    <p class="fs-5 mb-1 fw-bold attendance-lable">Week Off </p>                                   
-                                </div>
-                            </div>
-                            <div class="col-8 text-center">
-                                <select class="form-select form-control" name="week_off" id="week_off">
-                                  <option value="Monday" >Monday</option>
-                                  <option value="Tuesday" >Tuesday</option>
-                                  <option value="Wednesday" >Wednesday</option>
-                                  <option value="Thursday" >Thursday</option>
-                                  <option value="Friday" >Friday</option>
-                                  <option value="Saturday" >Saturday</option>
-                                  <option value="Sunday" >Sunday</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    
-            </div>
 
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button class="btn btn-primary submit-week-off" >Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="modal fade" id="salary_block" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header border-bottom">
-        <h4 class="modal-title" id="exampleModalToggleLabel">Employee Salary Slip</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body " style="font-size: 26px;font-weight: 600;">
-       
-        <div class="row mt-3">
-            <div class="col-5 text-end">
-                <input type="hidden" value="1" id="employee-id-val">
-                <div class="ms-3 mt-2">
-                    <p class="fs-3  fw-bold">Month/Year </p>                                   
-                </div>
-            </div>
-            <div class="col-7 text-start ">
-                <div class="input-group ui calendar w-75" id="salary_month_year">
-                    <input type="text"  placeholder="Salary slip month" class="form-control hasDatepicker valid"> 
-                    <span class="input-group-text time-picker-addon"><i class="las ti ti-calendar-month"></i></span>
-                </div>
-                <label class="error salary_month_year_error" style="display: none;">Please select salary slip month.</label>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <button class="btn btn-primary submit-salary-date" style="font-size: 15px;">Pay Slip Download</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="edit_approve_block" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content">
-      <input type="hidden" value="" id="edit_approve_employee-id">
-      <div class="modal-header border-bottom">
-        <h4 class="modal-title" id="exampleModalToggleLabel">Employee Edit Details</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-           
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary submit-approve-edit" data-type="Reject" data style="font-size: 19px;">Reject</button>
-        <button class="btn btn-primary submit-approve-edit" data-type="Approve" style="font-size: 19px;">Approve</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- extra for footer -->
 </div>
@@ -324,4 +162,6 @@
             
            
           </script>
+<script src="{{$base_url}}/public/js/moment.min.js"></script>
+<script src="{{$base_url}}/public/js/daterangepicker.js"></script>
 <script src="{{$base_url}}/public/js/attandence_report.js"></script>

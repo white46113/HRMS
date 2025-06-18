@@ -405,6 +405,20 @@
             </div>
             {{/if}}
 
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Reports</span>
+            </li>
+            <div class="sub-menu">
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./attendence_report" aria-expanded="false">
+                <span>
+                  <i class="ti ti-plane-departure"></i>
+                </span>
+                <span class="hide-menu">Attandence Report</span>
+              </a>
+            </li>
+
             <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
                 <span>

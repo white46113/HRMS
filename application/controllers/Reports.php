@@ -53,7 +53,9 @@ class Reports extends MY_Controller
             "width" => "17%",
             "className" => "dt-center",
         ];
-                
+        $company_id = $this->session->userdata('company_id');
+        $emplyoee_data = $this->reports_model->getEmployeeData($company_id);
+        $data['employee_data'] = $emplyoee_data;
         $data["data"] = $column;
         $data["is_searching_enable"] = true;
         $data["is_paging_enable"] = true;
@@ -110,13 +112,9 @@ public function attendenceReport() {
             }
         }
     }
-// pr($attandence_data,1);
-    
     $column_index = array_column($post_data["columns"], "data");
-    
     $data["data"] = $attandence_data;
     $total_record = $this->reports_model->getAttandanceDataCount($condition_arr, $post_data["search"]);
-    
     $data["recordsTotal"] = count($total_record);
     $data["recordsFiltered"] = count($total_record);
    
