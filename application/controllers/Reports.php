@@ -115,9 +115,10 @@ public function attendenceReport() {
     $column_index = array_column($post_data["columns"], "data");
     $data["data"] = $attandence_data;
     $total_record = $this->reports_model->getAttandanceDataCount($condition_arr, $post_data["search"]);
+    
     $data["recordsTotal"] = count($total_record);
     $data["recordsFiltered"] = count($total_record);
-   
+    
     // Remove any debug output before this
     echo json_encode($data);
     exit; // Use exit instead of die for consistency

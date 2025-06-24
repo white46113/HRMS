@@ -302,6 +302,7 @@ class Salary_model extends CI_Model
     }
 
     public function getEmployeeData($month_name = '',$employee_id = ''){
+        
         // $company_id = $this->session->userData('company_id');
         $this->db->select('em.employee_id,em.designation,em.department,c.company_name,c.company_logo as company_logo,d.departmen_name,ds.designation_name,co.country_name,s.vState,bm.bank_name,bm.account_no,CONCAT(if(em.city is null,"",em.city)," ", s.vState," ", co.country_name) as address
         ,concat(em.first_name," ",em.last_name) as full_name,em.employee_code,em.employment_date,em.pf_number,ew.employee_week_off as week_off,em.over_time_allow,em.overtime_rate_per_hour');

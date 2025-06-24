@@ -8,6 +8,7 @@ const page = {
         this.dataTable();
         this.filter();
         this.initDateRangePicker();
+        this.initSelect2()
     },
     dataTable: function(){
         var data = this.serachParams();
@@ -186,6 +187,12 @@ const page = {
                 format: 'DD-MM-YYYY'
             }
         });
+    },
+    initSelect2:function(){
+        $("#employee_drop_down").select2({
+        placeholder: "Please se;ect Employee",
+        // allowClear: true,
+    });
     }
 }
 

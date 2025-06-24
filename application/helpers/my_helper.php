@@ -333,8 +333,9 @@ function formatStandardDateTime($input, $outputFormat = 'd-m-Y H:i:s') {
         error_log("DateTime parsing failed for '$input'. Errors: " . print_r($errors, true));
         return null;
     }
-    
-    return $date->format($outputFormat);
+    $ymd_fort = $date->format($outputFormat);
+	$time = date('h:i A', strtotime($ymd_fort));
+    return $time;
 }
 
 ?>

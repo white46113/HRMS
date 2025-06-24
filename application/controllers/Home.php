@@ -480,7 +480,7 @@ class Home extends MY_Controller
                 $employee_ids,
                 $current_month
             );
-            // pr($week_off_data,1);
+            
             $employee_week_off_data = [];
             foreach ($week_off_data as $key => $value) {
                 $employee_week_off_data[$value["employee_id"]]["week_off_id"] =

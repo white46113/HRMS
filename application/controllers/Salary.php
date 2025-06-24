@@ -792,7 +792,7 @@ class Salary extends MY_controller
         }
 
         $allocated_leaves = $this->salary_model->getAllocatedLeaves($deparment_ids, $designation_ids);
-        
+    //    pr($employee_data,1);
         if (is_valid_array($employee_data)) {
             foreach ($employee_data as $key => $val) {
                 /* employee logo add */
@@ -803,6 +803,7 @@ class Salary extends MY_controller
                 $over_time_per_min = $val['overtime_rate_per_hour'] / 60;
                 $combo_arrs = array_key_exists($val['employee_id'],$this->combo_off) ? $this->combo_off[$val['employee_id']] : [];
                 $working_days_data = $this->getWorkingDays(explode(',', $val['week_off']),$combo_arrs);
+                
                 $week_off_count = $working_days_data['week_off_count'];
                 $working_data_arr = $working_days_data['working_arr'];
                 $employee_shift_arr_raw = $this->salary_model->getEmployeeShiftData($val['employee_id'],$date_arr);
@@ -820,12 +821,13 @@ class Salary extends MY_controller
                 }
 
                 $calulated_array = $this->getMonthlyCalculation($component_data, $date_arr);
-
                 
                 //below code for calculating the absent days.
+                
                 if (is_valid_array($working_data_arr)) {
                     foreach ($working_data_arr as $working_key => $working_value) {
                         if (array_key_exists($val['employee_id'], $attandence_data) && !in_array($working_value, $attandence_data[$val['employee_id']])) {
+                            
                             $leave_data_temp = array_key_exists($val['employee_id'], $leaves_dates) ? $leaves_dates[$val['employee_id']] : [];
                             $atotal_incomebsent_flag = $this->compareThreeDatas($leave_data_temp, $working_value);
                             if (!$atotal_incomebsent_flag['absent_flag']) {
@@ -854,11 +856,13 @@ class Salary extends MY_controller
                         }
 
                     }
+                  
                     if (!array_key_exists($val['employee_id'], $attandence_data)) {
                         $absent_days_count = $working_days_data['working_days'];
                     }
                 }
-
+                
+              
                 foreach ($calulated_array as $key => $val_in) {
                     if ($val_in['component_type'] == 'Income') {
                         $income_arr[] = $val_in;
@@ -868,7 +872,7 @@ class Salary extends MY_controller
                         $total_deduction += $val_in['component_value'];
                     }
                 }
-                
+               
                 if (is_valid_array($leaves_dates) && array_key_exists($val['employee_id'], $leaves_dates)) {
                     foreach ($leaves_dates[$val['employee_id']] as $l_date_k => $l_date_val) {
                         $today = new DateTime();
@@ -884,6 +888,8 @@ class Salary extends MY_controller
                 $net_amount_with_absent = $new_amount - ($absent_days_count * $per_day) + $over_time_amount_min_wise;
                 $net_amount_with_absent -= $total_deduction;
                 $pdf_data['employee_data'] = $val;
+                $arr_test = array('new_amount' => $new_amount,'per_day' => $per_day,'absent_amount'=>$net_amount_with_absent);
+                
                 // get apsent day wise component value
 
                 $total_income = 0;
@@ -948,12 +954,15 @@ class Salary extends MY_controller
 
     public function compareThreeDatas($leaves_dates = [], $work_date = '')
     {
+        
         if (!is_valid_array($leaves_dates) || $work_date == '') {
             return 0;
         }
         $absent_flag = false;
         $type = 'full';
+        
         foreach ($leaves_dates as $date_k => $date_v) {
+           
             $w_day = new DateTime($work_date);
             $st_leave_date = new DateTime($date_v['leave_start_date']);
             $e_leave_date = new DateTime($date_v['leave_end_date']);
@@ -969,7 +978,9 @@ class Salary extends MY_controller
                 break;
             }
         }
+        
         $ret_arr['type'] =  $type;
+       
         $ret_arr['absent_flag'] = $absent_flag;
         return $ret_arr;
     }
@@ -1106,13 +1117,14 @@ class Salary extends MY_controller
                 $working_arr[] = $dayDate;
             }
         }
-
+        
         $return_arr['working_arr'] = $working_arr;
         $return_arr['working_days'] = $workingDays;
         $return_arr['week_off_count'] = count($week_off_arr);
         $return_arr['week_off_arr'] = $week_off_arr;
         $return_arr['week_off_holiday'] = $week_off_holiday;
         $return_arr['days_in_month'] = $days_in_month;
+        // pr($return_arr,1);
         return $return_arr;
     }
 
@@ -1121,9 +1133,11 @@ class Salary extends MY_controller
         if (!is_valid_array($days)) {
             return 0;
         }
-
         $day_dates = [];
         foreach ($days as $day_k => $day_val) {
+            if (empty($day_val)) {
+            continue; // Skip if day value is empty
+        }
             $date = new DateTime("{$year}-{$month}-01");
             $date->modify("first $day_val of this month");
             while ($date->format('m') == $month) {
