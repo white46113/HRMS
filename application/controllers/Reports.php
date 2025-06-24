@@ -80,6 +80,7 @@ class Reports extends MY_Controller
 public function attendenceReport() {
     $order_by = "";
     $post_data = $this->input->post();
+    // pr($post_data,1);
     $column_index = array_column($post_data["columns"], "data");
     foreach ($post_data["order"] as $key => $val) {
         if ($key == 0) {

@@ -5,10 +5,10 @@ var filter_id = '';
 // var myModal = new bootstrap.Modal(document.getElementById('child_part_update'))
 const page = {
     init: function(){
+        this.initDateRangePicker();
         this.dataTable();
         this.filter();
-        this.initDateRangePicker();
-        this.initSelect2()
+        this.initSelect2();
     },
     dataTable: function(){
         var data = this.serachParams();
@@ -185,7 +185,6 @@ const page = {
             opens: 'right',
             locale: {
                 format: 'DD-MM-YYYY',
-                cancelLabel: 'Clear'
             }
         });
     },
