@@ -1,4 +1,9 @@
  <!-- salary calender  -->
+ <style>
+ .select2-selection__clear{
+    z-index:10000;
+ }
+ </style>
 <link rel="stylesheet" href="public/css/plugin/SemanticCalender/semantic_calender.css" />
 <script src="public/js/plugin/SemanticCalender/semantic_calender.js"></script>
 <!-- salary calender  -->

@@ -28,7 +28,7 @@ class Reports extends MY_Controller
         ];
          $column[] = [
             "data" => "start_time",
-            "title" => "Start Time",
+            "title" => "Shift Start Time",
             "width" => "10%",
             "className" => "dt-center",
 			'orderable' => false
@@ -42,7 +42,7 @@ class Reports extends MY_Controller
         ];
         $column[] = [
             "data" => "end_time",
-            "title" => "End Time",
+            "title" => "Shift End Time",
             "width" => "10%",
             "className" => "dt-center",
 			'orderable' => false
@@ -93,7 +93,7 @@ public function attendenceReport() {
     $condition_arr["length"] = $post_data["length"];
     $attandence_data = $this->reports_model->getAttandanceData($condition_arr, $post_data["search"]);
     $sift_data = $this->reports_model->employeeSiftdata();
-   
+    
     foreach ($attandence_data as $key => $record) {
         $shift_start = null;
         $shift_end = null;

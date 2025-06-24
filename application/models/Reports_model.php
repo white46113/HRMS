@@ -7,6 +7,7 @@ class Reports_model extends CI_Model
     }
 
     public function getAttandanceData($condition_arr = [],$search_params = ""){
+        $company_id = $this->session->userdata('company_id');
         $this->db->select("ea.*,em.middle_name,em.last_name,
          CONCAT(em.first_name, ' ', em.middle_name, ' ', em.last_name) AS first_name");
         $this->db->from('employee_attendance ea');
@@ -39,6 +40,9 @@ class Reports_model extends CI_Model
          if(isset($search_params['endDate']) && $search_params['endDate'] != ''){
             $this->db->where('ea.attendance_date <=',formatDate($search_params['endDate'],'d-m-Y','Y-m-d'));
         }
+
+        $this->db->where('em.company_id',$company_id);
+
         if (count($condition_arr) > 0) {
             $this->db->limit($condition_arr["length"], $condition_arr["start"]);
             if ($condition_arr["order_by"] != "") {
@@ -53,7 +57,7 @@ class Reports_model extends CI_Model
     }
 
     public function getAttandanceDataCount($condition_arr = [],$search_params = []){
-       
+        $company_id = $this->session->userdata('company_id');
         $this->db->select('ea.*,em.middle_name,em.last_name,em.first_name');
         $this->db->from('employee_attendance ea');
         $this->db->join('employee_master em', 'ea.employee_id = em.employee_id');
@@ -87,6 +91,7 @@ class Reports_model extends CI_Model
         if(isset($search_params['endDate']) && $search_params['endDate'] != ''){
             $this->db->where('ea.attendance_date <=',formatDate($search_params['endDate'],'d-m-Y','Y-m-d'));
         }
+        $this->db->where('em.company_id',$company_id);
         
         $query = $this->db->get();
         $result = is_object($query)?$query->result_array():[];

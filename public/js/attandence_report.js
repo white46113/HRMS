@@ -184,14 +184,15 @@ const page = {
             endDate: end,
             opens: 'right',
             locale: {
-                format: 'DD-MM-YYYY'
+                format: 'DD-MM-YYYY',
+                cancelLabel: 'Clear'
             }
         });
     },
     initSelect2:function(){
         $("#employee_drop_down").select2({
-        placeholder: "Please se;ect Employee",
-        // allowClear: true,
+        placeholder: "Please select Employee",
+        allowClear: true,
     });
     }
 }
